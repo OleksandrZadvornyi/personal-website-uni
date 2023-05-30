@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/hobby.css">
+    <link rel="icon" href="img/internet.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Мої хобі</title>
+</head>
+
+<body>
+    <header>
+        <div class="personal-photo">
+            <img src="img/my-photo.jpg" alt="Моя фотографія">
+        </div>
+
+        <div class="uni-info">
+            <p>Тернопільський національний технічний університет ім. Івана Пулюя</p>
+            <p>Факультет ФІС</p>
+            <p>Кафедра комп’ютерних наук</p>
+        </div>
+
+        <div class="logos">
+            <a href="https://tntu.edu.ua/?p=uk/main" target="_blank"><img class="uni-logo" src="img/tntu-logo.png"
+                    alt="Логотип ТНТУ" width="100"></a>
+
+            <a href="https://fis.tntu.edu.ua/" target="_blank"><img class="faculty-logo" src="img/fis-logo.png"
+                    alt="Логотип факультету інформаційних систем" height="100"></a>
+
+            <a href="http://kaf-kn.tntu.edu.ua/" target="_blank"><img class="cathedra-logo" src="img/kkn-logo.png"
+                    alt="Логотип кафедри комп’ютерних наук" width="200"></a>
+        </div>
+
+        <section class="personal-info">
+            <h1>Персональна сторінка</h1>
+            <p class="name">Задворного Олександра Миколайовича</p>
+            <p>група СП-31</p>
+        </section>
+
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Біографія</a></li>
+                    <li><a href="group.html">Група</a></li>
+                    <li><a href="hobby.html">Хобі</a></li>
+                    <li><a href="interesting.html">Цікаве</a></li>
+                    <br style="padding-top: 40px;">
+                </ul>
+                <div class="dropdown">
+                    <button onclick="showDropdown('dropdown1')" class="dropbtn">Приклади</button>
+                    <div id="dropdown1" class="dropdown-content">
+                        <a href="examples/example1.html">Приклад 1</a>
+                        <a href="examples/example2.html">Приклад 2</a>
+                        <a href="examples/example3.html">Приклад 3</a>
+                        <a href="examples/example4.html">Приклад 4</a>
+                        <a href="examples/example5.html">Приклад 5</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="showDropdown('dropdown2')" class="dropbtn">Завдання 2-12</button>
+                    <div id="dropdown2" class="dropdown-content">
+                        <a href="tasks/task2.html">Завдання 2</a>
+                        <a href="tasks/task3.html">Завдання 3</a>
+                        <a href="tasks/task4.html">Завдання 4</a>
+                        <a href="tasks/task6.html">Завдання 6</a>
+                        <a href="tasks/task7.html">Завдання 7</a>
+                        <a href="tasks/task8.html">Завдання 8</a>
+                        <a href="tasks/task9.html">Завдання 9</a>
+                        <a href="tasks/task10.html">Завдання 10</a>
+                        <a href="tasks/task11.html">Завдання 11</a>
+                        <a href="tasks/task12.html">Завдання 12</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <script>
+            function showDropdown(name) {
+                document.getElementById(name).classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+    </header>
+
+    <main>
+        <h1>Мої хобі</h1>
+        <aside>
+            <a href=""><img src="img/reklama-5.PNG" alt="" width="300" height="876"></a>
+        </aside>
+
+        <section>
+            <h2>Читання</h2>
+            <p>
+                Читання приносить мені величезне задоволення ще з дитинства. Світ літератури цікавий і
+                нескінченний. Зрозуміло, це не означає, що я люблю всі книги.
+            </p>
+
+            <p>
+                Зрозуміло, деякі книги стали моїми фаворитами. Коли я відкриваю одну з них, я відразу ж занурююся у світ
+                моїх улюблених героїв. Книга здатна змусити мене сміятися чи плакати, тому що я починаю відчувати саме
+                те, що відчувають герої. Я відчуваю чийсь біль чи радість, і я усвідомлюю, що мистецтво слова в деяких
+                книгах має виняткову силу.
+            </p>
+
+            <p>
+                Книга дає мені можливість поглянути на наше життя очима автора, проаналізувати та погодитися чи ні з
+                його точкою зору.
+            </p>
+            <img src="img/reading-girl.jpg" alt="A girl reading a book" width="254">
+        </section>
+
+        <section>
+            <h2>Ігри</h2>
+            <p>
+                Іноді я полюбляю грати в комп’ютерні ігри. Як дорослі, так і діти люблять це заняття. Це стало одним з
+                найбільш популярних хобі в даний час. Я думаю, що комп’ютерна гра дуже цікава. Це не тільки “витрачати
+                час”, як деякі люди кажуть.
+            </p>
+
+            <p>
+                Комп’ютерні ігри стимулюють нас обдумати речі належним чином, вони розширюють і розвивають наш розум і
+                уяву. У мене є гарна колекція різних ігор, і коли у мене є вільний час, я граю в них з великим
+                задоволенням. Деякі з моїх друзів мають подібне хобі, тому нам подобається грати разом.
+            </p>
+
+            <p>
+                Завдяки віртуальній та доповненій реальності та сучасним технічним можливостям кожен може реалізувати
+                себе у сфері ігор.
+            </p>
+            <img src="img/gaming-2.jpg" alt="" width="254">
+        </section>
+
+        <section>
+            <h2>Прогулянки</h2>
+            <p>
+                Прогулянка пішки – це відмінний спосіб і відпочити, і навантажитися фізично: залежить від мети, з якою
+                ви вийшли прогулятися.
+            </p>
+
+            <p>
+                Сучасний темп життя занурює нас в побутові стреси, ми постійно перебуваємо в
+                нервовому напруженні. І забуваємо, що навіть коротка прогулянка в приємному місці допоможе змінити
+                картинку і розвантажити нас. Ходьба пішки – також один з найдоступніших видів
+                активності для людини, він простий і зрозумілий.
+            </p>
+
+            <p>
+                Крім позитивного ефекту для здоров'я, пройшовши 15-30 хвилин містом, перед або після роботи, через
+                сквери або парки, ви можете економити гроші на проїзді.
+            </p>
+            <img src="img/walking-outdoors.jpg" alt="" width="254">
+        </section>
+    </main>
+</body>
+
+</html>

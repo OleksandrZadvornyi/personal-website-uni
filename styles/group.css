@@ -1,0 +1,36 @@
+main {
+    background: linear-gradient(to bottom, #3EADCF, #03C8A8);
+    padding: 0 40px 20px 40px;
+
+    color: #faf9f6;
+    text-shadow: 2px 1px 2px black;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 10px;
+}
+
+footer {
+    padding: 0 40px 40px 40px;
+    margin-bottom: 50px;
+    background: linear-gradient(to bottom, #03C8A8, #6E45E1);
+
+    text-shadow: 2px 1px 2px black;
+    color: #faf9f6;
+}
+
+footer div {
+    display: inline-block;
+    margin-right: 26px;
+}
+
+.last-ad {
+    margin-right: 0;
+}

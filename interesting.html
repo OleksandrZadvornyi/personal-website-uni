@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/interesting.css">
+    <link rel="icon" href="img/internet.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Цікаве</title>
+</head>
+
+<body>
+    <header>
+        <div class="personal-photo">
+            <img src="img/my-photo.jpg" alt="Моя фотографія">
+        </div>
+
+        <div class="uni-info">
+            <p>Тернопільський національний технічний університет ім. Івана Пулюя</p>
+            <p>Факультет ФІС</p>
+            <p>Кафедра комп’ютерних наук</p>
+        </div>
+
+        <div class="logos">
+            <a href="https://tntu.edu.ua/?p=uk/main" target="_blank"><img class="uni-logo" src="img/tntu-logo.png"
+                    alt="Логотип ТНТУ" width="100"></a>
+
+            <a href="https://fis.tntu.edu.ua/" target="_blank"><img class="faculty-logo" src="img/fis-logo.png"
+                    alt="Логотип факультету інформаційних систем" height="100"></a>
+
+            <a href="http://kaf-kn.tntu.edu.ua/" target="_blank"><img class="cathedra-logo" src="img/kkn-logo.png"
+                    alt="Логотип кафедри комп’ютерних наук" width="200"></a>
+        </div>
+
+        <section class="personal-info">
+            <h1>Персональна сторінка</h1>
+            <p class="name">Задворного Олександра Миколайовича</p>
+            <p>група СП-31</p>
+        </section>
+
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Біографія</a></li>
+                    <li><a href="group.html">Група</a></li>
+                    <li><a href="hobby.html">Хобі</a></li>
+                    <li><a href="interesting.html">Цікаве</a></li>
+                    <br style="padding-top: 40px;">
+                </ul>
+                <div class="dropdown">
+                    <button onclick="showDropdown('dropdown1')" class="dropbtn">Приклади</button>
+                    <div id="dropdown1" class="dropdown-content">
+                        <a href="examples/example1.html">Приклад 1</a>
+                        <a href="examples/example2.html">Приклад 2</a>
+                        <a href="examples/example3.html">Приклад 3</a>
+                        <a href="examples/example4.html">Приклад 4</a>
+                        <a href="examples/example5.html">Приклад 5</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="showDropdown('dropdown2')" class="dropbtn">Завдання 2-12</button>
+                    <div id="dropdown2" class="dropdown-content">
+                        <a href="tasks/task2.html">Завдання 2</a>
+                        <a href="tasks/task3.html">Завдання 3</a>
+                        <a href="tasks/task4.html">Завдання 4</a>
+                        <a href="tasks/task6.html">Завдання 6</a>
+                        <a href="tasks/task7.html">Завдання 7</a>
+                        <a href="tasks/task8.html">Завдання 8</a>
+                        <a href="tasks/task9.html">Завдання 9</a>
+                        <a href="tasks/task10.html">Завдання 10</a>
+                        <a href="tasks/task11.html">Завдання 11</a>
+                        <a href="tasks/task12.html">Завдання 12</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <script>
+            function showDropdown(name) {
+                document.getElementById(name).classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+    </header>
+
+    <main>
+        <h1>Цікаве</h1>
+        <article>
+            <img src="img/tntu.jpg" alt="ТНТУ ім. Івана Пулюя" width="300">
+            <h2>Скільки років ТНТУ</h2>
+            <p>Історія університету нерозривно пов’язана з історією Тернополя. З 60-х років минулого століття розвиток
+                міста відбувався за рахунок будівництва значної кількості промислових підприємств, у т.ч. промислових
+                гігантів — Тернопільського комбайнового заводу, ВО «Ватра» (на базі заводу «Електроарматура»), пізніше –
+                заводів «Сатурн» і «Оріон». Десятки підприємств потребували кваліфікованих інженерних кадрів. На базі
+                Львівського політехнічного інституту 11 листопада 1960 року для забезпечення цієї потреби було
+                організовано Тернопільський загальнотехнічний факультет з вечірньою та заочною формами навчання.
+            </p>
+        </article>
+
+        <article>
+            <img src="img/coding.jpg" alt="ТНТУ ім. Івана Пулюя" width="300">
+            <h2>Моя спеціальність</h2>
+            <p>Освітньо-професійна програма «Інженерія програмного забезпечення» охоплює всі аспекти розробки
+                програмного забезпечення від початкових стадій створення специфікації до підтримки системи після здачі в
+                експлуатацію. В процесі навчання вивчаються мови програмування та технології розробки віконних і
+                мобільних додатків, веб-сайтів, загальна теорія проєктування, конструювання та моделювання програмного
+                забезпечення, управління проєктами з розробки програмних систем, принципи та підходи до тестування
+                програмних продуктів тощо.
+            </p>
+        </article>
+
+        <article>
+            <img src="img/online-learning2.jpg" alt="ТНТУ ім. Івана Пулюя" width="300">
+            <h2>Як ефективно вчитись під час дистанційного навчання</h2>
+            <p>Якщо спочатку навчання за допомогою онлайн платформ здавалось складним та незрозумілим, то зараз до нього
+                майже усі звикли. А вчитись із дому стало частиною буденного життя. Для того аби дистанційне навчання
+                було ефективним, потрібно відвідувати лекції та уважно слухати викладача. А також – вести конспекти,
+                робити скріншоти або записи екрану. Потім це все можна повторити самостійно. Для ефективного
+                дистанційного навчання також варто скласти для себе графік навчання, адже без нього буде складно. А якщо
+                за ним слідувати, то організм звикає і потім буде легше і все працюватиме «на автоматі». Також не варто
+                не відкладати нічого на останній момент.
+            </p>
+        </article>
+
+        <article>
+            <img src="img/programmer.jpg" alt="ТНТУ ім. Івана Пулюя" width="300">
+            <h2>Чим займаються програмісти</h2>
+            <p>Програмістами узагальнено називають категорію людей, що займаються розробкою алгоритмів та програм на
+                основі математичних моделей. Програмістів умовно можна розділити на три категорії: прикладні, системні
+                та веб-програмісти. Програміст повинен мати терпіння та витримку. Це абсолютно незамінні якості в його
+                роботі. Програмування — галузь яка бурхливо розвивається, тому потрібно вміти швидко адаптуватися і
+                постійно вивчати щось нове. Інакше через кілька років ваша цінність як фахівця може помітно знизитися.
+                Вміння об'єктивно оцінювати можливості технологій та їх використання в кожному конкретному випадку.
+            </p>
+        </article>
+    </main>
+</body>
+
+</html>

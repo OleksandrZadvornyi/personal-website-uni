@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/tasks/task8.css">
+    <link rel="icon" href="../img/internet.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Завдання 8</title>
+</head>
+
+<body onload="testCellphoneNumber(document.getElementById('cellphone-number').value);">
+    <header>
+        <div class="personal-photo">
+            <img src="../img/my-photo.jpg" alt="Моя фотографія">
+        </div>
+
+        <div class="uni-info">
+            <p>Тернопільський національний технічний університет ім. Івана Пулюя</p>
+            <p>Факультет ФІС</p>
+            <p>Кафедра комп’ютерних наук</p>
+        </div>
+
+        <div class="logos">
+            <a href="https://tntu.edu.ua/?p=uk/main" target="_blank"><img class="uni-logo" src="../img/tntu-logo.png"
+                    alt="Логотип ТНТУ" width="100"></a>
+
+            <a href="https://fis.tntu.edu.ua/" target="_blank"><img class="faculty-logo" src="../img/fis-logo.png"
+                    alt="Логотип факультету інформаційних систем" height="100"></a>
+
+            <a href="http://kaf-kn.tntu.edu.ua/" target="_blank"><img class="cathedra-logo" src="../img/kkn-logo.png"
+                    alt="Логотип кафедри комп’ютерних наук" width="200"></a>
+        </div>
+
+        <section class="personal-info">
+            <h1>Персональна сторінка</h1>
+            <p class="name">Задворного Олександра Миколайовича</p>
+            <p>група СП-31</p>
+        </section>
+
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="../about.html">Біографія</a></li>
+                    <li><a href="../group.html">Група</a></li>
+                    <li><a href="../hobby.html">Хобі</a></li>
+                    <li><a href="../interesting.html">Цікаве</a></li>
+                    <br style="padding-top: 40px;">
+                </ul>
+                <div class="dropdown">
+                    <button onclick="showDropdown('dropdown1')" class="dropbtn">Приклади</button>
+                    <div id="dropdown1" class="dropdown-content">
+                        <a href="../examples/example1.html">Приклад 1</a>
+                        <a href="../examples/example2.html">Приклад 2</a>
+                        <a href="../examples/example3.html">Приклад 3</a>
+                        <a href="../examples/example4.html">Приклад 4</a>
+                        <a href="../examples/example5.html">Приклад 5</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="showDropdown('dropdown2')" class="dropbtn">Завдання 2-12</button>
+                    <div id="dropdown2" class="dropdown-content">
+                        <a href="task2.html">Завдання 2</a>
+                        <a href="task3.html">Завдання 3</a>
+                        <a href="task4.html">Завдання 4</a>
+                        <a href="task6.html">Завдання 6</a>
+                        <a href="task7.html">Завдання 7</a>
+                        <a href="task8.html">Завдання 8</a>
+                        <a href="task9.html">Завдання 9</a>
+                        <a href="task10.html">Завдання 10</a>
+                        <a href="task11.html">Завдання 11</a>
+                        <a href="task12.html">Завдання 12</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <script>
+            function showDropdown(name) {
+                document.getElementById(name).classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+
+            function testCellphoneNumber(str) {
+                if (str != "") {
+                    let cellphoneTemplate = new RegExp("(\\(032\\))?\\d{3}((-\\d{2}-)|(\\d{2}))\\d{2}");
+
+                    str = str.replace(cellphoneTemplate, "");
+                    if (str === "") {
+                        document.getElementById("msg").innerText = "Це львівський міський номер телефону.";
+                        document.getElementById("msg").style.color = "green";
+                    }
+                    else {
+                        document.getElementById("msg").innerText = "Це не львівський міський номер телефону!";
+                        document.getElementById("msg").style.color = "red";
+                    }
+                } else {
+                    document.getElementById("msg").innerText = "";
+                }
+            }
+        </script>
+    </header>
+
+    <main>
+        <h2>Завдання 8</h2>
+
+        <div class="flex-container">
+            <input type="text" id="cellphone-number" placeholder="Введіть номер телефону:"
+                onkeyup="testCellphoneNumber(this.value);">
+            <p id="msg"></p>
+        </div>
+    </main>
+</body>
+
+</html>

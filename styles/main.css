@@ -1,0 +1,143 @@
+/* Інформаційний блок (тег <main>) */
+main {
+    background: linear-gradient(to bottom, #3EADCF, #03C8A8);
+    padding: 10px 40px 0 40px;
+    text-shadow: 2px 1px 2px black;
+    color: #faf9f6;
+}
+
+main aside {
+    float: right;
+    width: 300px;
+    height: 650px;
+}
+
+aside span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+
+    font-size: 45px;
+}
+
+main section,
+main div {
+    width: 800px;
+}
+
+main>h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main h3 {
+    font-size: 22px;
+    margin: 5px 0 0 5px
+}
+
+main p {
+    text-align: right;
+    margin: 10px 0;
+    padding-bottom: 5px;
+}
+
+main a {
+    margin-right: 12px;
+    color: #E2DFD2;
+}
+
+main a:hover {
+    color: aliceblue;
+}
+
+.about {
+    background: url('../img/about.jpg') no-repeat right;
+    background-size: cover;
+}
+
+.about:hover {
+    opacity: 1;
+}
+
+.group {
+    background: url('../img/group.jpg') no-repeat right;
+    background-size: cover;
+}
+
+.hobby {
+    display: inline-block;
+    width: 250px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.hobby a {
+    margin-right: 10px;
+}
+
+.books {
+    background: url('../img/reading.jpg');
+    background-size: cover;
+}
+
+.gaming {
+    background: url('../img/gaming.jpg');
+    background-size: cover;
+}
+
+.walks {
+    background: url('../img/walking.jpg');
+    background-size: cover;
+    margin-right: 0;
+}
+
+.hobby p {
+    margin-top: 38px;
+}
+
+.interesting {
+    padding-bottom: 12px;
+}
+
+.interesting p {
+    margin-top: 50px;
+}
+
+.interesting h3 {
+    margin-top: 10px;
+}
+
+.fact-1 {
+    background: url('../img/university.jpg') center;
+    background-size: cover;
+}
+
+.fact-2 {
+    background: url('../img/computer-science.jpg') center;
+    background-size: cover;
+}
+
+.fact-3 {
+    background: url('../img/online-learning.jpg') center;
+    background-size: cover;
+}
+
+/* Нижня частина сторінки (тег <footer>) */
+footer {
+    padding: 0 40px 40px 40px;
+    margin-bottom: 50px;
+    background: linear-gradient(to bottom, #03C8A8, #6E45E1);
+
+    text-shadow: 2px 1px 2px black;
+    color: #faf9f6;
+}
+
+footer div {
+    display: inline-block;
+    margin-right: 26px;
+}
+
+.last-ad {
+    margin-right: 0;
+}
